@@ -1,16 +1,13 @@
-struct Student* createNode(int id, char *nodeName)
-{
-    struct Student *temp;
-    temp = (struct Student*)malloc(sizeof(struct Student));
-    temp->id = id;
-    temp->*name = nodeName;
-    return temp;
-}
+
 
 
 void insertFirst(int id,char *name)
 {
-    struct Student *node = createNode(id,name);
+    struct Student *node;
+    node->id = id;
+    node->name = strdup(name);
+    node->next = NULL;
+    node->prev = NULL;
     if(head == NULL)
     {
         head = node;
@@ -30,7 +27,11 @@ void insertFirst(int id,char *name)
 
 void append(int id, char *name)
 {
-    struct Student *node = createNode(id,name);
+    struct Student *node;
+    node->id = id;
+    node->name = strdup(name);
+    node->next = NULL:
+    node->prev = NULL;
     if(tail == NULL)
     {
         head = node;
