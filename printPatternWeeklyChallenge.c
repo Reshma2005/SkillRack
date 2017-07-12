@@ -1,4 +1,4 @@
-/**
+/*
 print the pattern based on given input]
 input:5
 output:
@@ -10,7 +10,7 @@ output:
 
 
 
-/
+*/
 
 
 
